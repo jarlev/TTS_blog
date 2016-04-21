@@ -1,0 +1,23 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+  # Mayor.create(name: 'Emanuel', city: cities.first)
+  user1 = User.create!(username: 'bobdylan', name: 'Robert Zimmerman', email: 'bobbyd777@gmail.com', birthday: "1981-03-23", password: "rollingstone")
+  user2 = User.create!(username: "jackwhite", name: "Jack Black", email: "whitestripes9@gmail.com", birthday: "1970-04-12", password: "bluesmaster")
+  blog1 = user1.blog_posts.create!(title: "Blowin in the wind", blog_entry: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu dapibus ex, et eleifend velit. Cras vestibulum rhoncus nunc a ullamcorper. Sed iaculis dapibus eros, vitae viverra justo interdum in. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sed enim metus. Proin quis odio nulla. Nam luctus egestas massa sit amet placerat. Cras ac ultricies tellus. Sed sit amet bibendum leo. Nam leo neque, feugiat ac nisi in, mattis dictum velit. Quisque vel ante a velit mollis rhoncus ac ut augue. Sed ligula erat, pretium nec feugiat id, mollis vel lacus. Vestibulum nec turpis dui. Suspendisse vulputate urna justo, ac fringilla nisi mattis sit amet. Maecenas in tortor at lectus venenatis dignissim in a nisl." )
+   blog2 = user1.blog_posts.create!(title: "Tombstone Blues", blog_entry: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu dapibus ex, et eleifend velit. Cras vestibulum rhoncus nunc a ullamcorper. Sed iaculis dapibus eros, vitae viverra justo interdum in. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sed enim metus. Proin quis odio nulla. Nam luctus egestas massa sit amet placerat. Cras ac ultricies tellus. Sed sit amet bibendum leo. Nam leo neque, feugiat ac nisi in, mattis dictum velit. Quisque vel ante a velit mollis rhoncus ac ut augue. Sed ligula erat, pretium nec feugiat id, mollis vel lacus. Vestibulum nec turpis dui. Suspendisse vulputate urna justo, ac fringilla nisi mattis sit amet. Maecenas in tortor at lectus venenatis dignissim in a nisl.")
+   blog3 = user2.blog_posts.create!(title: "Howdy", blog_entry: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu dapibus ex, et eleifend velit. Cras vestibulum rhoncus nunc a ullamcorper. Sed iaculis dapibus eros, vitae viverra justo interdum in. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sed enim metus. Proin quis odio nulla. Nam luctus egestas massa sit amet placerat. Cras ac ultricies tellus. Sed sit amet bibendum leo. Nam leo neque, feugiat ac nisi in, mattis dictum velit. Quisque vel ante a velit mollis rhoncus ac ut augue. Sed ligula erat, pretium nec feugiat id, mollis vel lacus. Vestibulum nec turpis dui. Suspendisse vulputate urna justo, ac fringilla nisi mattis sit amet. Maecenas in tortor at lectus venenatis dignissim in a nisl." )
+    blog4 = user2.blog_posts.create!(title: "Seven Nation Army", blog_entry: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu dapibus ex, et eleifend velit. Cras vestibulum rhoncus nunc a ullamcorper. Sed iaculis dapibus eros, vitae viverra justo interdum in. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sed enim metus. Proin quis odio nulla. Nam luctus egestas massa sit amet placerat. Cras ac ultricies tellus. Sed sit amet bibendum leo. Nam leo neque, feugiat ac nisi in, mattis dictum velit. Quisque vel ante a velit mollis rhoncus ac ut augue. Sed ligula erat, pretium nec feugiat id, mollis vel lacus. Vestibulum nec turpis dui. Suspendisse vulputate urna justo, ac fringilla nisi mattis sit amet. Maecenas in tortor at lectus venenatis dignissim in a nisl." )
+    blog1.comments.create!(user: user1, comment_entry: "tae viverra justo interd")
+    blog1.comments.create!(user: user2, comment_entry: "tae viverra justo interd")
+    blog2.comments.create!(user: user1, comment_entry: "tae viverra justo interd")
+    blog2.comments.create!(user: user2, comment_entry: "tae viverra justo interd")
+    blog3.comments.create!(user: user1, comment_entry: "tae viverra justo interd")
+    blog3.comments.create!(user: user2, comment_entry: "tae viverra justo interd")
+    blog4.comments.create!(user: user1, comment_entry: "tae viverra justo interd")
+    blog4.comments.create!(user: user2, comment_entry: "tae viverra justo interd")
+
+    
