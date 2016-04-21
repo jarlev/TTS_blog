@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="page-header text-center">
+  <h1><%= @user.username %>'s Blog Posts<small>something cool</small></h1>
+</div>
+<p>Birthday <%= @user.birthday.strftime("%m-%d-%Y") %>
+</p>
+
+<div class='container'>
+  <% @user.blog_posts.each do |blog_post| %>
+    <div class="well well-lg blog-well">
+      <h3><%= link_to blog_post.title, blog_post %></h3>
+      <p>author: <%= blog_post.user.username %></p>
+      <p>published: <%= local_time(blog_post.created_at) %></p>
+      <p><%= truncate(blog_post.blog_entry, length: 100) %></p>
+      <p><%= link_to 'Read More', blog_post %></p>
+    </div>
+  <% end %>
+</div>
+<br>

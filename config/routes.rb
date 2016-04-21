@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   resources :blog_posts do 
     collection do 
       get "your_posts"
+      get "user_posts"
     end
   end
-
-  root to: "blog_posts#index"
+  # get "pages/home" => "pages#home"
+  root to: "pages#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

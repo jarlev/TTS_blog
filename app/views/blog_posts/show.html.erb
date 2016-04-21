@@ -7,7 +7,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @blog_post.user.username %>
+  <%= link_to @blog_post.user.username, user_posts_blog_posts_path(id: @blog_post.user.id) %>
 </p>
 
 <p>Created: <%= local_time(@blog_post.created_at) %></p>
@@ -23,7 +23,7 @@
 
 <% @blog_post.comments.each do |comment| %>
   <div class="well well-sm">
-    <p>Author: <%= comment.user.username %></p>
+    <p>Author: <%= link_to comment.user.username, user_posts_blog_posts_path(id: comment.user.id) %></p>
     <p>Entry: <%= comment.comment_entry %></p>
     <p>Created: <%= local_time(comment.created_at) %></p>
   </div>
